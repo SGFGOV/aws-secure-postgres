@@ -1,0 +1,5 @@
+src/*
+lambda/*
+tsconfig*
+*node_modules*
+*.log
