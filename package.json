@@ -1,11 +1,11 @@
 {
   "name": "aws-secure-postgres",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "enables securing postgres via rds iam",
   "main": "index.ts",
   "scripts": {
     "test": "jest",
-    "build": "rm -rf ./src/dist && tsc ./src/**/*.ts --outDir ./dist"
+    "build": "rm -rf ./src/dist && tsc"
   },
   "repository": {
     "type": "git",
