@@ -1,0 +1,25 @@
+{
+  "name": "aws-secure-postgres",
+  "version": "1.0.0",
+  "description": "enables securing postgres via rds iam",
+  "main": "index.ts",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SGFGOV/secure-postgres.git"
+  },
+  "keywords": [
+    "postgres",
+    "secure",
+    "aws",
+    "iam"
+  ],
+  "author": "govind diwakar",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SGFGOV/secure-postgres/issues"
+  },
+  "homepage": "https://github.com/SGFGOV/secure-postgres#readme"
+}
