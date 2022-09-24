@@ -7,6 +7,7 @@ const axios = require('axios');
 
 export interface ConfigAws 
 {
+  dbName: string;
     host:string,port:number,aws_region:string,username:string
 }
 

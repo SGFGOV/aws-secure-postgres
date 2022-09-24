@@ -1,15 +1,23 @@
 import { Gateway } from "../testing_helpers/gateway";
 import { TestHelper } from '../testing_helpers/testhelper';
-
+import {jest,beforeAll,afterAll,describe,test,expect} from '@jest/globals'
 
 beforeAll(async () => {
     const dotenv=require ("dotenv").config()
     const RDS_HOST=process.env.RDS_HOST;
     const PORT=process.env.RDS_PORT;
     const USERNAME=process.env.RDS_USERNAME;
+    const DB_NAME = process.env.RDS_DBNAME??"postgres";
     jest.setTimeout(10000) 
     console.log(RDS_HOST,PORT,USERNAME)
-    await TestHelper.instance.setupTestDB(USERNAME??"postgres",PORT??"5432",RDS_HOST!);
+    try {
+    await TestHelper.instance.setupTestDB(USERNAME??"postgres",PORT??"5432",RDS_HOST!,DB_NAME!);
+    }
+    catch(err){
+        const error = err as Error;
+        console.log("unable to setup ",error.message)
+    }
+
 });
 
 afterAll(() => {

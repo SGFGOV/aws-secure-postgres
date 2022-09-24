@@ -27,7 +27,7 @@ export class TestHelper {
  //   private testdb!: any;
 
 
-    async setupTestDB(username:string,port:string,host:string) {
+    async setupTestDB(username:string,port:string,host:string,dbName:string) {
         const secretsClient = new SecretsManagerClient({region: "ap-south-1"});
         
         secure_rds.config(
@@ -36,6 +36,7 @@ export class TestHelper {
             port: parseInt(port,10) || 5432 /* postgres port */,
             aws_region: process.env.RDS_REGION??"ap-south-1",
             username,
+            dbName,
             }
         )
         this.dbConnect =  new DataSource({
@@ -44,7 +45,7 @@ export class TestHelper {
           port: 5432,
           username: secure_rds.awsConfig.username,
           password: secure_rds.getToken,
-          database: "postgres",
+          database: secure_rds.awsConfig.dbName,
           synchronize:true,
           entities:[path.join(__dirname, './entities/*.entity.ts')],
           migrationsRun:true,
