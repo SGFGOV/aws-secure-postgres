@@ -1,6 +1,6 @@
 {
   "name": "aws-secure-postgres",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "enables securing postgres via rds iam",
   "main": "index.ts",
   "scripts": {
