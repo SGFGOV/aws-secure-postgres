@@ -105,6 +105,7 @@
     "**/__tests__/**/*",
     "**/lambda/**/*",
     "**/testing_helpers/**/*",
-    "**/node_modules/**/*"
+    "**/node_modules/**/*",
+    "**/dist/**/*",
   ]
 }
