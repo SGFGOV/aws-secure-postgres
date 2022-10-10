@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/SGFGOV/secure-postgres.git"
+    "url": "git+https://github.com/SGFGOV/aws-secure-postgres.git"
   },
   "keywords": [
     "postgres",
